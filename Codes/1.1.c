@@ -18,7 +18,6 @@ fclose(fp);
 int  main(void) //main function begins
 {
 uniform("uni.dat",1000000);
-printf("asdfghjk");
 return 0;
 }
 
