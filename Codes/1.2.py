@@ -7,7 +7,6 @@ simlen = int(1e6) #number of samples
 err = [] #declaring probability list
 #randvar = np.random.normal(0,1,simlen)
 randvar = np.loadtxt('uni.dat',dtype='double')
-#randvar = np.loadtxt('gau.dat',dtype='double')
 for i in range(0,30):
 	err_ind = np.nonzero(randvar < x[i]) #checking probability condition
 	err_n = np.size(err_ind) #computing the probability
@@ -17,7 +16,7 @@ for i in range(0,30):
 plt.plot(x.T,err)#plotting the CDF
 plt.grid() #creating the grid
 plt.xlabel('$x$')
-plt.ylabel('$F_X(x)$')
+plt.ylabel('$F_U(x)$')
 plt.savefig('uni_cdf.pdf')
 plt.savefig('uni_cdf.eps')
 plt.show() #opening the plot window
