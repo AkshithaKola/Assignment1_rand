@@ -20,10 +20,9 @@ def uni_cdf(x):
 		return 0
 	return x
 		
-vec_uni_cdf = scipy.vectorize(uni_cdf, otypes=[float])
 
 plt.plot(x.T,err, 'o')#plotting the CDF
-plt.plot(x, vec_uni_cdf(x))
+plt.plot(x, uni_cdf(x))
 plt.grid() #creating the grid
 plt.legend()
 plt.savefig('uni_cdf.pdf')
