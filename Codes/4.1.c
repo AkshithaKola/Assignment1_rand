@@ -19,11 +19,10 @@ temp += (double)rand()/RAND_MAX;
 fprintf(fp,"%lf\n",temp);
 }
 fclose(fp);
-
 }
 
 int  main(void) //main function begins
 {
-sum("sum.dat",1000000);
+sum("T.dat",1000000);
 return 0;
 }
